@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+<script data-require="angular.js@1.6.1" data-semver="1.6.1"
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+<title>Angular_AWS_Learning</title>
+</head>
+
+
+
+<body ng-controller="MainController">
+
+	<h1>{{message}}</h1>
+
+	<div ng-controller="RestController">
+
+		<h2> GitHub Viewer</h2>
+		
+
+		<form name="dynamicdata">
+			<input type="text" placeholder="Enter the github user name"
+				 ng-model="userngmodel" /> 
+			<input type="submit"
+				value="Search User" ng-click="searchuser(userngmodel)" class="button button2"/> <br />
+			<div ng-include="'UserDetail.html'" ng-show="user" ></div>
+
+		</form>
+	</div>
+
+
+</body>
+
+</html>

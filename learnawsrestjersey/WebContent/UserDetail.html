@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>
+		<b>Name:</b> {{user.name}}
+	</h3>
+
+	<h3>
+		<b>GitHub Url:</b> {{user.url}}
+	</h3>
+
+
+
+	<img ng-src={{user.avatar_url}} alt="Smiley face" height="100"
+		width="100">
+
+	<table class="table">
+
+		<thead align="left" class="tbl-header">
+			<tr>
+				<th>Name</th>
+				<th>Full name</th>
+				<th>Html Url</th>
+			</tr>
+		</thead>
+		<tr ng-repeat="repo in repositories" class="tbl-content">
+
+			<td>{{repo.name }}</td>
+			<td>{{repo.full_name}}</td>
+			<td>{{repo.html_url }}</td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

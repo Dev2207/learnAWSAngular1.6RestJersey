@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="userapp">
+
+<head>
+<script data-require="angular.js@1.6.1" data-semver="1.6.1"
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+<link rel="stylesheet" href="style.css" />
+<script src="awsusers.js"></script>
+<title>Angular_AWS_RDS_Learning</title>
+</head>
+
+
+<body>
+
+	<div ng-controller="UserController">
+	
+			<h1>{{message}}</h1>
+	</div>
+	<div ng-controller="UserDetailsController">
+	
+		<input type="submit"
+				value="Get Aws RDS Data" ng-click="getuser()" class="button button2"/> <br />
+		<div ng-include="'AwsUserDetail.html'" ng-show="users" ></div>
+	</div>
+	
+
+</body>
+
+</html>
